@@ -1,0 +1,40 @@
+import React from 'react';
+import './App.css'; // 스타일 파일
+
+const App = () => {
+  // 가상의 메뉴 데이터
+  const menuItems = [
+    { id: 1, name: '메뉴 3', price: '$10' },
+    { id: 2, name: '메뉴 2', price: '$15' },
+    { id: 3, name: '메뉴 2', price: '$15' },
+    { id: 4, name: '메뉴 2', price: '$15' },
+    { id: 5, name: '메뉴 2', price: '$15' },
+    { id: 6, name: '메뉴 2', price: '$15' },
+    { id: 7, name: '메뉴 2', price: '$15' },
+    { id: 8, name: '메뉴 2', price: '$15' },
+    { id: 9, name: '메뉴 2', price: '$15' },
+    { id: 10, name: '메뉴 2', price: '$15' },
+    { id: 11, name: '메뉴 2', price: '$15' },
+    { id: 12, name: '메뉴 2', price: '$15' },
+    // 나머지 메뉴 데이터
+  ];
+
+  return (
+    <div className="app-container">
+      {/* 헤더, 음식 카테고리 등의 섹션 추가 */}
+      
+      {/* 메뉴 */}
+      <div className="menu">
+        {/* 메뉴 아이템들을 동적으로 렌더링 */}
+        {menuItems.map(menuItem => (
+          <div key={menuItem.id} className="menu-item">
+            <h2>{menuItem.name}</h2>
+            <p>가격: {menuItem.price}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default App;
